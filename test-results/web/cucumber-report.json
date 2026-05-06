@@ -4,95 +4,69 @@
     "elements": [
       {
         "description": "",
-        "id": "verify-user-details-from-json-placeholder-api;get-user-details",
+        "id": "json-placeholder-api-testing;verify-user-details-from-json-placeholder-api",
         "keyword": "Scenario",
-        "line": 4,
-        "name": "Get user details",
+        "line": 5,
+        "name": "Verify user details from JSON Placeholder API",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1639028399
+              "duration": 3198523799
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 5,
-            "name": "I hit the api endpoint",
-            "match": {
-              "location": "src\\test\\api\\api\\steps\\userPlacceholderSteps.ts:5"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 262911699
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
             "line": 6,
-            "name": "I should receive a response with status code 200",
+            "name": "I send the API request",
             "match": {
-              "location": "src\\test\\api\\api\\steps\\userPlacceholderSteps.ts:16"
+              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:4"
             },
             "result": {
               "status": "passed",
-              "duration": 3731899
+              "duration": 286449900
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
             "line": 7,
-            "name": "I should see the user id",
+            "name": "I should verify status code 200",
             "match": {
-              "location": "src\\test\\api\\api\\steps\\userPlacceholderSteps.ts:22"
+              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 5416000
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 8,
-            "name": "I should see the user name",
-            "match": {
-              "location": "src\\test\\api\\api\\steps\\userPlacceholderSteps.ts:36"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 4038599
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "Then ",
-            "line": 9,
-            "name": "I should see the user email",
-            "match": {
-              "location": "src\\test\\api\\api\\steps\\userPlacceholderSteps.ts:29"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3892499
+              "duration": 3548700
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 10,
-            "name": "I should see the user address",
+            "line": 8,
+            "name": "I should verify the user id",
             "match": {
-              "location": "src\\test\\api\\api\\steps\\userPlacceholderSteps.ts:43"
+              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:16"
             },
             "result": {
               "status": "passed",
-              "duration": 4317100
+              "duration": 2031199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 9,
+            "name": "I should verify the title",
+            "match": {
+              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4617099
             }
           },
           {
@@ -100,29 +74,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 344199
+              "duration": 367100
             }
           }
         ],
         "tags": [
           {
-            "name": "@userapi",
+            "name": "@placeholder",
             "line": 1
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "verify-user-details-from-json-placeholder-api",
-    "line": 2,
+    "id": "json-placeholder-api-testing",
+    "line": 3,
     "keyword": "Feature",
-    "name": "Verify user details from JSON Placeholder API",
+    "name": "JSON Placeholder API Testing",
     "tags": [
       {
-        "name": "@userapi",
+        "name": "@placeholder",
         "line": 1
       }
     ],
-    "uri": "src\\test\\api\\api\\features\\userPlaceholder.feature"
+    "uri": "src\\test\\api\\api\\features\\jsonPlaceholder.feature"
   }
 ]

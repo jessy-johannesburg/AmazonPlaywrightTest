@@ -8,7 +8,7 @@ let browser: Browser;
 let page: Page;
 
 Before(async function () {
-    browser = await chromium.launch({ headless: false });
+    browser = await chromium.launch({ headless: true });
     page = await browser.newPage();
 
     // attach to world
