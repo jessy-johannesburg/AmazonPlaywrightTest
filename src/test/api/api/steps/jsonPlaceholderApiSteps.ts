@@ -4,8 +4,8 @@ import { expect, request } from "@playwright/test";
 Given('I send the API request', async function () {
     const apiContext= await request.newContext();
         this.response =  await apiContext.get('https://jsonplaceholder.typicode.com/posts/1');
-        this.statusCode = this.response.status();
-        this.responseBody = await this.response.json();
+        this.statusCode =  this.response.status();
+        this.responseBody =  this.response.json();
 })
 
 Then('I should verify status code {int}',async function (int: number) {
