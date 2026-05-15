@@ -1,11 +1,12 @@
 import { Given, Then } from '@cucumber/cucumber';
 import { expect, request } from "@playwright/test";
+import { ENV } from '../../../../config/env';
 
 Given('I send the API request', async function () {
-    const apiContext= await request.newContext();
-        this.response =  await apiContext.get('https://jsonplaceholder.typicode.com/posts/1');
-        this.statusCode =  this.response.status();
-        this.responseBody =  this.response.json();
+    const apiContext= await request.newContext({baseURL: ENV.JSON_BASE_URL});
+    this.response =  await apiContext.get('/posts/1');
+    this.statusCode =  this.response.status();
+    this.responseBody =  await this.response.json();
 })
 
 Then('I should verify status code {int}',async function (int: number) {

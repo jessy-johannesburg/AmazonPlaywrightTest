@@ -2,7 +2,6 @@ import { expect, Page } from '@playwright/test';
 
 export class GrandPrixPage {
   constructor(private page: Page) {
-    this.page = page;
   }
 
   public FORMULA_1 = "xpath =//span[@class='ssrcss-1u47p8g-LinkTextContainer eis6szr1'and text()='Formula 1']";

@@ -4,69 +4,160 @@
     "elements": [
       {
         "description": "",
-        "id": "json-placeholder-api-testing;verify-user-details-from-json-placeholder-api",
+        "id": "saucedemo-login-and-product-tests;verify-successful-login-with-valid-credentials",
         "keyword": "Scenario",
-        "line": 5,
-        "name": "Verify user details from JSON Placeholder API",
+        "line": 4,
+        "name": "Verify successful login with valid credentials",
         "steps": [
           {
             "keyword": "Before",
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 3198523799
+              "duration": 1444380699
             }
           },
           {
             "arguments": [],
             "keyword": "Given ",
-            "line": 6,
-            "name": "I send the API request",
+            "line": 5,
+            "name": "I am on the SauceDemo login page",
             "match": {
-              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:4"
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:12"
             },
             "result": {
               "status": "passed",
-              "duration": 286449900
+              "duration": 3649835500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 6,
+            "name": "I enter valid username and password",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 68523999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 7,
+            "name": "I click on the login button",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100931400
             }
           },
           {
             "arguments": [],
             "keyword": "Then ",
-            "line": 7,
-            "name": "I should verify status code 200",
-            "match": {
-              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:11"
-            },
-            "result": {
-              "status": "passed",
-              "duration": 3548700
-            }
-          },
-          {
-            "arguments": [],
-            "keyword": "And ",
             "line": 8,
-            "name": "I should verify the user id",
+            "name": "I should be redirected to the products page",
             "match": {
-              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:16"
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:23"
             },
             "result": {
               "status": "passed",
-              "duration": 2031199
+              "duration": 29462900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 9,
+            "name": "I select a product from the product list",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 100272099
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "I should be navigated to the product details page",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:56"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 322099
             }
           },
           {
             "arguments": [],
             "keyword": "And ",
-            "line": 9,
-            "name": "I should verify the title",
+            "line": 11,
+            "name": "I click on the Add to Cart button",
             "match": {
-              "location": "src\\test\\api\\api\\steps\\jsonPlaceholderSteps.ts:22"
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:51"
             },
             "result": {
               "status": "passed",
-              "duration": 4617099
+              "duration": 58221499
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "I click on the cart icon",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 88672200
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "the product should be added to the cart",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:43"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24649500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 14,
+            "name": "verify product details in the cart",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:47"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16540199
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 15,
+            "name": "I click on Remove button",
+            "match": {
+              "location": "src\\test\\web\\steps\\saucedemoSteps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 53915300
             }
           },
           {
@@ -74,29 +165,29 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 367100
+              "duration": 389929299
             }
           }
         ],
         "tags": [
           {
-            "name": "@placeholder",
+            "name": "@saucedemo",
             "line": 1
           }
         ],
         "type": "scenario"
       }
     ],
-    "id": "json-placeholder-api-testing",
-    "line": 3,
+    "id": "saucedemo-login-and-product-tests",
+    "line": 2,
     "keyword": "Feature",
-    "name": "JSON Placeholder API Testing",
+    "name": "SauceDemo Login and Product Tests",
     "tags": [
       {
-        "name": "@placeholder",
+        "name": "@saucedemo",
         "line": 1
       }
     ],
-    "uri": "src\\test\\api\\api\\features\\jsonPlaceholder.feature"
+    "uri": "src\\test\\web\\features\\saucedemo.feature"
   }
 ]

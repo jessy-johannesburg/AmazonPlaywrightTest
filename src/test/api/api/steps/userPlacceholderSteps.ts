@@ -1,20 +1,17 @@
 import { Given, Then } from '@cucumber/cucumber';
 import { expect, request } from '@playwright/test';
+import { ENV } from '../../../../config/env';
 
 Given('I hit the api endpoint', async function () {
-  const apiContext = await request.newContext();
-
-  this.response = await apiContext.get(
-    'https://jsonplaceholder.typicode.com/users'
-  );
-
+  const apiContext = await request.newContext({baseURL: ENV.USER_BASE_URL});
+  this.response = await apiContext.get('/users');
   this.statusCode = this.response.status();
   this.responseBody = await this.response.json(); 
 });
 
 Then('I should receive a response with status code {int}', async function (status: number) {
-  console.log('Actual Status code:', this.statusCode);
   expect(this.statusCode).toBe(status);
+  console.log('Actual Status code:', this.statusCode);
 });
 
 Then('I should see the user id', async function () {

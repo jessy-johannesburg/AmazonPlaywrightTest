@@ -3,6 +3,7 @@ import { expect } from "@playwright/test";
 import { SauceDemoLoginPage } from "../../../pages/saucedemologinpage";
 import { SauceDemoProdPage } from "../../../pages/saucedemoprodpage";
 import { SauceDemoCartPage } from "../../../pages/saucedemocartpage";
+import { ENV } from "../../../config/env";
 
 let loginPage: SauceDemoLoginPage;
 let prodPage: SauceDemoProdPage;
@@ -12,7 +13,7 @@ Given('I am on the SauceDemo login page', async function () {
   loginPage = new SauceDemoLoginPage(this.page);
   prodPage = new SauceDemoProdPage(this.page);
   cartPage = new SauceDemoCartPage(this.page);
-  await this.page.goto('https://www.saucedemo.com/');
+  await this.page.goto(ENV.SAUCE_DEMO_BASE_URL);
 })
 
 When('I enter valid username and password', async function (){

@@ -1,8 +1,9 @@
 import { Given,When, Then } from '@cucumber/cucumber';
 import { expect,Page } from '@playwright/test';
+import { ENV } from '../../../config/env';
 
 Given('I opened amazon website', async function () {
-  await this.page.goto('https://www.amazon.co.za/');
+  await this.page.goto(ENV.AMAZON_BASE_URL);
 });
 
 Then('I verify update location text', async function () {
